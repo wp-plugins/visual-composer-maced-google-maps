@@ -1,0 +1,83 @@
+.google-map-wrapper .google-map-contact-wrapper {
+	height: 1px;
+	z-index: 10;
+	position: absolute;
+	left: 20px;
+	top: 10px;
+}
+
+.google-map-wrapper .google-map-contact-wrapper .get_in_touch {
+	width: 210px;
+	padding: 10px;
+	float: right;
+	position: relative;
+	background-color: #a1a61a;
+	padding-top: 20px;
+}
+
+.google-map-wrapper .google-map-contact-wrapper .get_in_touch p.sameH3 {
+	font-size: 25px;
+	line-height: 27px;
+	color: #fff !important;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+}
+
+.google-map-wrapper .google-map-contact-wrapper .get_in_touch ul {
+	margin: 0;
+	font-size: 100%;
+	line-height: normal;
+	color: #fff;
+	list-style: none outside;
+}
+
+.google-map-wrapper .google-map-contact-wrapper .get_in_touch ul li {
+	margin: 0;
+	list-style: none;
+	position: relative;
+	padding: 10px 0 10px 20px;
+	word-wrap: break-word;
+	color: #fff;
+}
+
+.google-map-wrapper .google-map-contact-wrapper .get_in_touch ul li a {
+	color: #fff;
+	font-size: 11px;
+}
+
+.google-map-wrapper .google-map-contact-wrapper .get_in_touch ul li:after
+	{
+	content: "";
+	display: block;
+	width: 70px;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, .2);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.google-map-wrapper .google-map-contact-wrapper .get_in_touch ul li p {
+	margin: 0;
+}
+
+.google-map-wrapper .google-map-contact-wrapper .get_in_touch ul li .icon
+	{
+	position: absolute;
+	left: -9px;
+	top: 5px;
+	display: block;
+	color: rgba(0, 0, 0, .7);
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	text-align: center;
+}
+
+.google-map-wrapper .google-map-contact-wrapper .get_in_touch ul li:last-child:after
+	{
+	display: none;
+}
