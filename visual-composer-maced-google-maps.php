@@ -16,7 +16,7 @@ class vcMacedGmap
     {
         // Plugin Details
         $this->plugin = new stdClass();
-        $this->plugin->name = 'vc-maced-gmap'; // Plugin Folder
+        $this->plugin->name = 'visual-composer-maced-google-maps'; // Plugin Folder
         $this->plugin->displayName = 'Visual Composer Maced Google Maps'; // Plugin Name
         $this->plugin->version = '0.0.1';
         $this->plugin->folder = WP_PLUGIN_DIR . '/' . $this->plugin->name; // Full Path to Plugin Folder
