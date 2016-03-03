@@ -107,7 +107,7 @@ class vcMacedGmap
                     array(
                         'type' => 'textarea',
                         'heading' => __('Additional Markers | Lat,Lng', $this->plugin->name),
-                        'param_name' => 'text',
+                        'param_name' => 'latlng',
                         'value' => '',
                         'description' => __('Separate Lat,Lang with <b>coma</b> [ , ]<br />Separate multiple Markers with <b>semicolon</b> [ ; ]<br />Example: <b>-33.88,151.21;-33.89,151.22</b>', $this->plugin->name)
                     ),
@@ -234,6 +234,9 @@ class vcMacedGmap
             // explode array
             $latlng = explode(';', $latlng);
             
+            // set bounds
+            $output .= 'var bounds = new google.maps.LatLngBounds();';
+            
             foreach ($latlng as $k => $v) {
                 
                 $markerID = $k + 1;
@@ -245,7 +248,11 @@ class vcMacedGmap
                     $output .= 'icon	: "' . $icn . '",';
                 $output .= 'map					: map';
                 $output .= '});';
+                
+                $output .= 'bounds.extend(new google.maps.LatLng(' . $v . '));';
             }
+            
+            $output .= 'bounds.extend(latlng);map.fitBounds(bounds);';
         }
         
         $output .= '}';
